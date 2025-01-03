@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "shinyshop",
+	"version": "${version}",
+	"name": "Shiny Shop",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"MajatoKurumi"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/shinyshop/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.majatoproj.ShinyShop"
+		],
+		"client": [
+			"io.github.majatoproj.ShinyShopClient"
+		],
+		"fabric-datagen": [
+			"io.github.majatoproj.ShinyShopDataGenerator"
+		]
+	},
+	"mixins": [
+		"shinyshop.mixins.json",
+		{
+			"config": "shinyshop.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"cobblemon": ">=1.6.0"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
